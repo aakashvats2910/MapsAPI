@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Google Map</h1>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(30.265576,77.0260377),
+    zoom:5,
+};
+var x = google.maps.LatLng(30.265576,77.0260377)
+var map =new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+
+var marker = new google.maps.Marker({
+    position:{lat:30.265576,lng:77.0260377},
+    map:map,    
+  });
+}
+
+</script>
+
+<script 
+src
+=
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyD7P57mjM3GiufAaSn5mzBBzcEZBWsWxHI&callback=myMap">
+</script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
